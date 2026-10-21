@@ -1,0 +1,21 @@
+{
+  "name": "back2school-africa-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/generate-seo.mjs",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "astro": "^7.4.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.5",
+    "eslint": "^9.38.0",
+    "typescript": "^5.9.3"
+  }
+}

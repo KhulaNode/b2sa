@@ -1,0 +1,64 @@
+---
+import { siteConfig } from '../config/site';
+import '../styles/global.css';
+const { title, description, image = '/images/joburg-library-learning.webp' } = Astro.props;
+const siteUrl = Astro.site?.origin;
+const canonical = siteUrl ? new URL(Astro.url.pathname, siteUrl).toString() : undefined;
+const ogImage = siteUrl ? new URL(image, siteUrl).toString() : image;
+const nav = [
+  { label: 'Home', href: '/' }, { label: 'About', href: '/about/' },
+  { label: 'Programmes', href: '/programmes/' }, { label: 'Tutor Mentor Connect', href: '/tutor-mentor-connect/' },
+  { label: 'Stories & resources', href: '/stories-resources/' }, { label: 'Get involved', href: '/get-involved/' },
+  { label: 'Contact', href: '/contact/' },
+];
+const current = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#06452f" />
+    <title>{title} | {siteConfig.name}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteConfig.name} />
+    <meta property="og:title" content={`${title} | ${siteConfig.name}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="topline" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/" aria-label="Back2School Africa home">
+          <img src="/images/back2school-wordmark.webp" width="905" height="575" alt="" />
+        </a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          {nav.map(item => <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>{item.label}</a>)}
+        </nav>
+        <details class="mobile-nav">
+          <summary aria-label="Open navigation"><span>Menu</span><span class="menu-icon" aria-hidden="true">☰</span></summary>
+          <nav aria-label="Mobile navigation">{nav.map(item => <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>{item.label}</a>)}</nav>
+        </details>
+      </div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <img src="/images/back2school-logo.webp" width="1536" height="1024" alt="Back2School Africa logo" loading="lazy" />
+          <p>Education, skills development and building communities.</p>
+        </div>
+        <div><h2>Explore</h2><a href="/about/">About us</a><a href="/programmes/">Programmes</a><a href="/tutor-mentor-connect/">Tutor Mentor Connect</a><a href="/stories-resources/">Stories & resources</a></div>
+        <div><h2>Take part</h2><a href="/get-involved/">Get involved</a><a href="/contact/">Contact</a>{siteConfig.donationUrl && <a href={siteConfig.donationUrl}>Donate</a>}</div>
+      </div>
+      <div class="wrap footer-bottom"><span>© {new Date().getFullYear()} Back2School Africa · NPO {siteConfig.registrationNumber}</span><span>Made for every next step.</span></div>
+    </footer>
+  </body>
+</html>
