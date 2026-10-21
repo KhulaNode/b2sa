@@ -7,3 +7,55 @@
 .brand img{width:112px;height:70px;object-fit:contain}
 @media(max-width:760px){.brand img{width:92px;height:58px}}
 .photo-credit a{text-decoration:underline;text-underline-offset:2px}
+/* Carry the supplied mockup's visual language through the inner pages. */
+.wrap{width:min(1160px,calc(100% - 48px))}
+h1,h2{font-family:Georgia,'Times New Roman',serif;letter-spacing:-.035em;font-weight:700}
+h3{font-family:var(--sans);letter-spacing:-.025em}
+.site-header{background:#fff}
+.topline{height:6px;background:linear-gradient(90deg,var(--green) 0 65%,var(--gold) 65%)}
+.header-inner{min-height:84px}
+.brand{gap:12px}
+.brand img{width:78px;height:68px;object-fit:contain}
+.brand-label{color:var(--muted);font-size:11px;line-height:1.25;white-space:nowrap}
+.brand-label b{display:block;color:var(--green);font-size:13px;letter-spacing:.11em}
+.brand-label small{font-size:11px;color:var(--muted)}
+.desktop-nav{gap:27px;flex-wrap:nowrap}
+.desktop-nav a,.desktop-more summary{font-size:13px;font-weight:700;white-space:nowrap}
+.desktop-nav a[aria-current=page]{text-decoration:none;color:var(--green)}
+.desktop-nav .header-cta{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:#fff;padding:13px 19px;border-radius:5px;min-height:45px}
+.desktop-nav .header-cta:hover{background:var(--green-mid);color:#fff}
+.desktop-more{position:relative}
+.desktop-more summary{cursor:pointer;list-style:none}
+.desktop-more summary::-webkit-details-marker{display:none}
+.desktop-more summary::after{content:'⌄';margin-left:5px}
+.desktop-more div{position:absolute;right:-18px;top:35px;z-index:15;width:215px;padding:10px;background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 14px 35px #173d2520}
+.desktop-more div a{display:block;padding:9px 10px;white-space:normal}
+.desktop-more div a:hover{background:var(--wash)}
+.page-hero{background:var(--wash);padding:75px 0 82px}
+.page-hero h1{color:var(--green);font-size:clamp(40px,5.5vw,64px)}
+.page-hero .lead{font-size:17px;color:#53645a}
+.section{padding:83px 0}
+.section h2{color:var(--green)}
+.programme-grid{gap:17px}
+.programme-card{min-height:205px;padding:24px 23px 22px;border-radius:8px}
+.card-number{display:none}
+.card-icon{width:42px;height:42px;margin-bottom:18px;background:#eef4e9}
+.programme-card h2,.programme-card h3{font-family:var(--sans);font-size:17px;letter-spacing:-.025em;color:var(--green)}
+.programme-card p{font-size:13px;line-height:1.6}
+.programme-card a{display:inline-block;margin-top:auto;border:0;padding-top:10px;font-size:12px}
+.button{border-radius:5px;font-size:13px;min-height:45px;padding:13px 19px}
+.about-photo{display:grid;grid-template-columns:minmax(240px,460px) 1fr;gap:24px;align-items:end;margin-top:-40px;margin-bottom:83px}
+.about-photo img{width:100%;max-height:390px;object-fit:cover;border-radius:8px}
+.about-photo figcaption{font-size:12px;color:var(--muted);max-width:460px}
+.about-photo figcaption a{text-decoration:underline;text-underline-offset:2px}
+.site-footer{background:#092e22;padding:46px 0 24px}
+.footer-grid{gap:60px}
+.footer-brand img{width:115px;background:#fff;border-radius:4px;padding:5px}
+.footer-brand p{font-size:12px;max-width:280px}
+.site-footer h2{font-size:12px;letter-spacing:0;text-transform:none;color:#fff;margin-bottom:10px}
+.site-footer a{font-size:12px;margin-bottom:7px;color:#c5d4ca}
+.footer-bottom{margin-top:29px;padding-top:17px;font-size:10px}
+@media(max-width:1120px){.desktop-nav{gap:16px}.desktop-nav a,.desktop-more summary{font-size:12px}.brand-label b{font-size:12px}}
+@media(max-width:980px){.desktop-nav{display:none}.mobile-nav{display:block}}
+@media(max-width:760px){.wrap{width:min(100% - 34px,560px)}.header-inner{min-height:76px}.brand img{width:64px;height:58px}.brand-label b{font-size:11px}.brand-label small{font-size:10px}.page-hero{padding:58px 0 65px}.section{padding:62px 0}.about-photo{grid-template-columns:1fr;margin-top:-20px;margin-bottom:62px}.about-photo img{max-height:420px}}
+@media(max-width:420px){.brand-label small{display:none}.brand-label b{font-size:10px;letter-spacing:.06em}}

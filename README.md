@@ -22,6 +22,7 @@ The local build omits the sitemap and writes a `robots.txt` that blocks indexing
 - Guide and resource cards: `src/data/resources.ts`
 - Unconfirmed public contact, donation, social and platform URLs: `src/config/site.ts`
 - Page copy: `src/pages/`
+- Mockup-aligned homepage styling: `src/styles/mockup-home.css`
 - Image attribution: `public/images/ATTRIBUTION.md`
 
 Keep unknown config values empty. The site hides unfinished links and does not collect enquiries. The contact page gives a privacy-conscious path and only renders a `mailto:` or phone link after a public channel has been confirmed. There is no registration, booking, payment or digital-campus integration.
