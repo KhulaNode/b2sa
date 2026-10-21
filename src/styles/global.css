@@ -50,7 +50,7 @@ h3{font-family:var(--sans);letter-spacing:-.025em}
 .about-photo figcaption a{text-decoration:underline;text-underline-offset:2px}
 .site-footer{background:#092e22;padding:46px 0 24px}
 .footer-grid{gap:60px}
-.footer-brand img{width:115px;background:#fff;border-radius:4px;padding:5px}
+.footer-brand img{width:115px;height:auto;aspect-ratio:3/2;object-fit:contain;background:#fff;border-radius:4px;padding:5px}
 .footer-brand p{font-size:12px;max-width:280px}
 .site-footer h2{font-size:12px;letter-spacing:0;text-transform:none;color:#fff;margin-bottom:10px}
 .site-footer a{font-size:12px;margin-bottom:7px;color:#c5d4ca}
