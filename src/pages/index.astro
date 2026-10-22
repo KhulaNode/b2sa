@@ -3,38 +3,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { programmes } from '../data/programmes';
 import '../styles/mockup-home.css';
 ---
-<BaseLayout title="Education that opens doors" description="Back2School Africa is an education-focused NPO supporting learning, skills and opportunity through community-rooted programmes.">
+<BaseLayout title="Home" description="Back 2 School Africa Programme is a nonprofit organisation committed to expanding educational access and empowering learners and young people.">
   <div class="mock-home">
     <section class="mock-hero">
       <div class="wrap mock-hero-grid">
         <div class="mock-hero-copy">
           <div class="mock-eyebrow">Education · Skills · Opportunity</div>
-          <h1>Every learner deserves a <em>way forward.</em></h1>
-          <p>Back2School Africa supports people at every stage of their learning journey—from building foundational skills to taking the next step into study, work and community life.</p>
-          <div class="mock-actions">
-            <a class="mock-button" href="/programmes/">Explore our programmes <span aria-hidden="true">→</span></a>
-            <a class="mock-button mock-secondary" href="/get-involved/">Support the work</a>
-          </div>
+          <h1>Welcome to <em>Back 2 School Africa </em>Programme</h1>
+          <p>Back 2 School Africa Programme is a nonprofit organisation committed to expanding educational access and empowering learners and young people through learning, guidance, skills development, human rights education and community partnerships.</p>
         </div>
         <div class="mock-hero-art" role="img" aria-label="Illustration of an open book, growing leaf and sun, with learning and growth messages">
-          <div class="mock-float mock-float-one"><span class="mock-spark" aria-hidden="true">✦</span><strong>Learn</strong><span>Build confidence and skills</span></div>
+          <div class="mock-float mock-float-one"><span class="mock-spark" aria-hidden="true">✦</span><strong>Learn</strong><span>Build knowledge and skills</span></div>
           <div class="mock-art-frame" aria-hidden="true"><div class="mock-sun"></div><div class="mock-leaf"></div><div class="mock-book"><div class="mock-page"><i class="mock-line"></i></div><div class="mock-page mock-right"></div><div class="mock-spine"></div></div><div class="mock-caption">Learning opens doors</div></div>
-          <div class="mock-float mock-float-two"><span class="mock-spark" aria-hidden="true">✦</span><strong>Grow</strong><span>Find the next opportunity</span></div>
+          <div class="mock-float mock-float-two"><span class="mock-spark" aria-hidden="true">✦</span><strong>Grow</strong><span>Explore what comes next</span></div>
         </div>
       </div>
     </section>
-    <div class="mock-band"><div class="wrap mock-band-grid">
-      <div class="mock-band-item"><span class="mock-band-icon" aria-hidden="true">◎</span><div><b>For learners and families</b><span>Support shaped around real needs</span></div></div>
-      <div class="mock-band-item"><span class="mock-band-icon" aria-hidden="true">↗</span><div><b>From school to opportunity</b><span>Guidance through important transitions</span></div></div>
-      <div class="mock-band-item"><span class="mock-band-icon" aria-hidden="true">✳</span><div><b>Rooted in community</b><span>Learning grows when people work together</span></div></div>
+
+    <div class="mock-band mock-intro-band"><div class="wrap mock-band-grid mock-intro-grid">
+      <div class="mock-band-item mock-intro-item"><span class="mock-band-icon" aria-hidden="true">↗</span><p>As the nonprofit arm of Tutor Mentor Connect, we focus on initiatives that help individuals access educational opportunities, build their capabilities and participate meaningfully in their communities.</p></div>
+      <div class="mock-band-item mock-intro-item"><span class="mock-band-icon" aria-hidden="true">✳</span><p>We believe that every young person deserves the information, support and opportunities needed to pursue their aspirations.</p></div>
     </div></div>
-    <section class="mock-section" id="programmes"><div class="wrap">
-      <div class="mock-section-head"><div class="mock-eyebrow">What we do</div><h2>Practical support for every stage of the journey.</h2><p>Explore the programmes connecting learners, families and communities with the tools and guidance to move forward.</p></div>
-      <div class="mock-program-grid">{programmes.map(item => <article class="mock-program"><div class="mock-icon" aria-hidden="true">{item.icon}</div><h3>{item.title}</h3><p>{item.intro}</p><a href={`/programmes/${item.slug}/`} aria-label={`Explore ${item.title}`}>Explore programme <span aria-hidden="true">→</span></a></article>)}</div>
+
+    <section class="mock-story" id="purpose"><div class="wrap mock-story-grid">
+      <div><div class="mock-eyebrow">Education opens doors</div><h2>Our Purpose</h2></div>
+      <div class="mock-story-box"><p>We work to make educational opportunities more accessible by connecting learners and young people with learning initiatives, higher education guidance, scholarship information, skills development and human rights education.</p></div>
     </div></section>
-    <section class="mock-tmc"><div class="wrap mock-tmc-grid"><div><div class="mock-eyebrow">Tutor Mentor Connect</div><h2>Learning can go further together.</h2><p>Explore the online learning ecosystem connecting primary, high-school and tertiary learners with tutors, study resources and professional mentors.</p><a class="mock-button mock-gold" href="/tutor-mentor-connect/">Explore Tutor Mentor Connect <span aria-hidden="true">→</span></a></div><div class="mock-tmc-notes" aria-label="Tutor Mentor Connect areas"><span>Tutoring across school subjects</span><span>South African and international languages</span><span>Study notes and community learning</span><span>Professional mentorship</span></div></div></section>
-    <section class="mock-story"><div class="wrap mock-story-grid"><div><div class="mock-eyebrow">Our purpose</div><h2>Education can restore dignity—and create possibility.</h2><p>Back2School Africa is an education-focused NPO working to help people learn, build skills and access opportunities.</p></div><div class="mock-story-box"><h3>One organisation. Many ways to move forward.</h3><p>From a child joining a reading club to a young person preparing a university application, each programme creates a place to begin.</p><a href="/about/">About our approach <span aria-hidden="true">→</span></a></div></div></section>
-    <section class="mock-section mock-path"><div class="wrap"><div class="mock-section-head"><div class="mock-eyebrow">A connected journey</div><h2>Support that meets people where they are.</h2><p>Find a programme and a next step that fits the learning journey.</p></div><div class="mock-path-row"><div><b>Discover</b><span>Find a welcoming entry point into learning and reading.</span></div><div><b>Strengthen</b><span>Build understanding through tutoring and skills support.</span></div><div><b>Choose</b><span>Explore career pathways and higher education options.</span></div><div><b>Thrive</b><span>Stay connected through mentorship and community.</span></div></div></div></section>
-    <section class="mock-cta"><div class="wrap"><div class="mock-cta-inner"><div><h2>Be part of someone’s next step.</h2><p>Volunteer, mentor, partner or support Back2School Africa’s education programmes.</p></div><a class="mock-button" href="/get-involved/">Get involved <span aria-hidden="true">→</span></a></div></div></section>
+
+    <section class="mock-section" id="programmes"><div class="wrap">
+      <div class="mock-section-head"><div class="mock-eyebrow">Education · Skills · Opportunity</div><h2>What We Do</h2></div>
+      <div class="mock-program-grid">{programmes.map(item => <article class="mock-program"><div class="mock-icon" aria-hidden="true">{item.icon}</div><h3>{item.title}</h3><p>{item.intro}</p></article>)}</div>
+    </div></section>
+
+    <section class="mock-cta"><div class="wrap"><div class="mock-cta-inner">
+      <div><h2>Be Part of the Change</h2><p>Educational progress is a shared responsibility. We welcome learners, volunteers, educators, institutions, organisations and sponsors who share our commitment to expanding opportunity.</p><p>Join us in building a future where more young people can learn, grow and thrive.</p></div>
+      <div class="mock-cta-actions"><a class="mock-button" href="#programmes">Explore Our Programmes</a><a class="mock-button mock-gold" href="/get-involved/#partners">Partner With Us</a><a class="mock-button mock-secondary" href="/get-involved/#volunteers">Volunteer With Us</a></div>
+    </div></div></section>
   </div>
 </BaseLayout>

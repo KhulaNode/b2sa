@@ -1,9 +1,0 @@
----
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { programmes } from '../../data/programmes';
----
-<BaseLayout title="Programmes" description="Explore Back2School Africa programmes in skills development, career guidance, tutoring, reading clubs, university applications and mentoring.">
-  <section class="page-hero"><div class="wrap narrow"><span class="eyebrow">Our programmes</span><h1>Practical support for the next step.</h1><p class="lead">Different learners need different kinds of support. Explore the areas that make up the Back2School Africa learning journey.</p></div></section>
-  <section class="section"><div class="wrap programme-grid">{programmes.map((item, index) => <article class="programme-card"><span class="card-number">0{index + 1}</span><span class="card-icon" aria-hidden="true">{item.icon}</span><h2>{item.title}</h2><p>{item.intro}</p><a href={`/programmes/${item.slug}/`} aria-label={`Explore ${item.title}`}>Explore programme <span aria-hidden="true">↗</span></a></article>)}</div></section>
-  <section class="section wash"><div class="wrap two-col"><div><span class="eyebrow">Online learning</span><h2>Meet Tutor Mentor Connect.</h2></div><div class="prose"><p>Discover the planned online ecosystem for tutoring, languages, study resources, community learning and professional mentorship.</p><a class="button" href="/tutor-mentor-connect/">Explore the ecosystem <span aria-hidden="true">↗</span></a></div></div></section>
-</BaseLayout>

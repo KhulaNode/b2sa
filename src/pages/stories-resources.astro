@@ -1,9 +1,0 @@
----
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { resources } from '../data/resources';
----
-<BaseLayout title="Stories & resources" description="Explore Back2School Africa programme guides and resources. Verified community stories will be added as they become available.">
-  <section class="page-hero"><div class="wrap narrow"><span class="eyebrow">Stories & resources</span><h1>Ideas and guides for moving forward.</h1><p class="lead">Start with these practical overviews. Community stories will be shared here when contributors have approved them for publication.</p></div></section>
-  <section class="section"><div class="wrap resource-grid">{resources.map(item => <article class="resource-card"><span class="eyebrow">{item.category}</span><h2>{item.title}</h2><p>{item.summary}</p><a href={item.href}>Read more <span aria-hidden="true">↗</span></a></article>)}</div></section>
-  <section class="section wash"><div class="wrap two-col"><div><span class="eyebrow">Community voices</span><h2>Stories with care.</h2></div><div class="prose"><p>Stories about learners and communities deserve consent, context and dignity. We will publish verified stories and images only after the people involved have approved their use.</p><a class="text-link" href="/contact/">Contact the team <span aria-hidden="true">→</span></a></div></div></section>
-</BaseLayout>

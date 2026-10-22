@@ -6,9 +6,9 @@ const siteUrl = Astro.site?.origin;
 const canonical = siteUrl ? new URL(Astro.url.pathname, siteUrl).toString() : undefined;
 const ogImage = siteUrl ? new URL(image, siteUrl).toString() : image;
 const nav = [
-  { label: 'Home', href: '/' }, { label: 'About', href: '/about/' },
-  { label: 'Programmes', href: '/programmes/' }, { label: 'Tutor Mentor Connect', href: '/tutor-mentor-connect/' },
-  { label: 'Stories & resources', href: '/stories-resources/' }, { label: 'Get involved', href: '/get-involved/' },
+  { label: 'About us', href: '/about/' }, { label: 'Education opportunities', href: '/education-opportunities/' },
+  { label: 'Home', href: '/' }, { label: 'Our impact', href: '/our-impact/' },
+  { label: 'Get involved', href: '/get-involved/' },
   { label: 'Contact', href: '/contact/' },
 ];
 const current = Astro.url.pathname;
@@ -36,15 +36,15 @@ const current = Astro.url.pathname;
     <div class="topline" aria-hidden="true"></div>
     <header class="site-header">
       <div class="wrap header-inner">
-        <a class="brand" href="/" aria-label="Back2School Africa home">
+        <a class="brand" href="/" aria-label="Back 2 School Africa Programme home">
           <img src="/images/back2school-logo.webp" width="1536" height="1024" alt="" />
-          <span class="brand-label"><b>BACK2SCHOOL AFRICA</b><small>Restoring dignity through education</small></span>
+          <span class="brand-label"><b>BACK 2 SCHOOL AFRICA</b><small>Programme · Nonprofit education initiatives</small></span>
         </a>
         <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="/programmes/" aria-current={current.startsWith('/programmes/') ? 'page' : undefined}>Our programmes</a>
           <a href="/about/" aria-current={current === '/about/' ? 'page' : undefined}>About us</a>
-          <a href="/about/#approach">Our approach</a>
-          <details class="desktop-more"><summary>More</summary><div><a href="/tutor-mentor-connect/">Tutor Mentor Connect</a><a href="/stories-resources/">Stories & resources</a><a href="/contact/">Contact</a></div></details>
+          <a href="/education-opportunities/" aria-current={current === '/education-opportunities/' ? 'page' : undefined}>Education opportunities</a>
+          <a href="/our-impact/" aria-current={current === '/our-impact/' ? 'page' : undefined}>Our impact</a>
+          <a href="/contact/" aria-current={current === '/contact/' ? 'page' : undefined}>Contact</a>
           <a class="header-cta" href="/get-involved/" aria-current={current === '/get-involved/' ? 'page' : undefined}>Get involved</a>
         </nav>
         <details class="mobile-nav">
@@ -57,13 +57,13 @@ const current = Astro.url.pathname;
     <footer class="site-footer">
       <div class="wrap footer-grid">
         <div class="footer-brand">
-          <img src="/images/back2school-logo.webp" width="115" height="77" alt="Back2School Africa logo" loading="lazy" />
-          <p>Education, skills development and building communities.</p>
+          <img src="/images/back2school-logo.webp" width="115" height="77" alt="Back 2 School Africa logo" loading="lazy" />
+          <p>Back 2 School Africa Programme expands access to education, guidance and opportunity.</p>
         </div>
-        <div><h2>Explore</h2><a href="/about/">About us</a><a href="/programmes/">Programmes</a><a href="/tutor-mentor-connect/">Tutor Mentor Connect</a><a href="/stories-resources/">Stories & resources</a></div>
+        <div><h2>Explore</h2><a href="/about/">About us</a><a href="/education-opportunities/">Education opportunities</a><a href="/our-impact/">Our impact</a></div>
         <div><h2>Take part</h2><a href="/get-involved/">Get involved</a><a href="/contact/">Contact</a>{siteConfig.donationUrl && <a href={siteConfig.donationUrl}>Donate</a>}</div>
       </div>
-      <div class="wrap footer-bottom"><span>© {new Date().getFullYear()} Back2School Africa · NPO {siteConfig.registrationNumber}</span><span>Made for every next step.</span></div>
+      <div class="wrap footer-bottom"><span>© {new Date().getFullYear()} {siteConfig.name}{siteConfig.registrationNumber && ` · NPO ${siteConfig.registrationNumber}`}</span><span class="footer-credit">Developed &amp; maintained by <a href="https://khulanode.com/">KhulaNode</a></span></div>
     </footer>
   </body>
 </html>
