@@ -1,7 +1,7 @@
 ---
 import { siteConfig } from '../config/site';
 import '../styles/global.css';
-const { title, description, image = '/images/joburg-library-learning.webp' } = Astro.props;
+const { title, description, image = '/images/learning-hero-v2.webp' } = Astro.props;
 const siteUrl = Astro.site?.origin;
 const canonical = siteUrl ? new URL(Astro.url.pathname, siteUrl).toString() : undefined;
 const ogImage = siteUrl ? new URL(image, siteUrl).toString() : image;

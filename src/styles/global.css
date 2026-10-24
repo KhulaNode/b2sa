@@ -106,3 +106,7 @@ h1,h2{font-family:var(--sans);font-weight:900;letter-spacing:-.055em}
 .footer-brand img{background:#fff}
 @media(max-width:980px){.header-inner{min-height:77px}.page-hero{min-height:300px}}
 @media(max-width:760px){.brand img{width:66px;height:57px}.page-hero{min-height:0;padding:58px 0;background-position:65% center}.page-hero h1{font-size:clamp(39px,9vw,58px)}.page-hero .lead{font-size:16px}.opportunity-photo{height:180px}}
+@media(max-width:760px){.page-hero h1{overflow-wrap:anywhere}}
+@media(max-width:420px){.header-inner{gap:8px}.brand{gap:6px;min-width:0;flex-shrink:1}.brand-label{min-width:0;white-space:normal}.mobile-nav{flex:none}}
+.contact-card a{overflow-wrap:anywhere}
+.about-hero-photo img{height:auto;aspect-ratio:4/3}
