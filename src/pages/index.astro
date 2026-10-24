@@ -12,9 +12,9 @@ import '../styles/mockup-home.css';
           <h1>Welcome to <em>Back 2 School Africa </em>Programme</h1>
           <p>Back 2 School Africa Programme is a nonprofit organisation committed to expanding educational access and empowering learners and young people through learning, guidance, skills development, human rights education and community partnerships.</p>
         </div>
-        <div class="mock-hero-art" role="img" aria-label="Illustration of an open book, growing leaf and sun, with learning and growth messages">
+        <div class="mock-hero-art">
           <div class="mock-float mock-float-one"><span class="mock-spark" aria-hidden="true">✦</span><strong>Learn</strong><span>Build knowledge and skills</span></div>
-          <div class="mock-art-frame" aria-hidden="true"><div class="mock-sun"></div><div class="mock-leaf"></div><div class="mock-book"><div class="mock-page"><i class="mock-line"></i></div><div class="mock-page mock-right"></div><div class="mock-spine"></div></div><div class="mock-caption">Learning opens doors</div></div>
+          <div class="mock-art-frame"><img src="/images/learning-hero-v2.webp" width="1536" height="1024" alt="Illustrative image of learners studying together in a library" /><div class="mock-caption">Learning opens doors</div></div>
           <div class="mock-float mock-float-two"><span class="mock-spark" aria-hidden="true">✦</span><strong>Grow</strong><span>Explore what comes next</span></div>
         </div>
       </div>
@@ -32,7 +32,7 @@ import '../styles/mockup-home.css';
 
     <section class="mock-section" id="programmes"><div class="wrap">
       <div class="mock-section-head"><div class="mock-eyebrow">Education · Skills · Opportunity</div><h2>What We Do</h2></div>
-      <div class="mock-program-grid">{programmes.map(item => <article class="mock-program"><div class="mock-icon" aria-hidden="true">{item.icon}</div><h3>{item.title}</h3><p>{item.intro}</p></article>)}</div>
+      <div class="mock-program-grid">{programmes.map((item, index) => <article class="mock-program"><img class="mock-program-photo" src={['/images/reading-together-v2.webp', '/images/study-guidance-v2.webp', '/images/study-guidance-v2.webp', '/images/learning-hero-v2.webp', '/images/joburg-library-learning.webp', '/images/community-mentorship-v2.webp'][index]} alt="" loading="lazy" /><div class="mock-program-body"><div class="mock-icon" aria-hidden="true">{item.icon}</div><h3>{item.title}</h3><p>{item.intro}</p></div></article>)}</div>
     </div></section>
 
     <section class="mock-cta"><div class="wrap"><div class="mock-cta-inner">

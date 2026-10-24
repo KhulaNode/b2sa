@@ -65,3 +65,44 @@ h3{font-family:var(--sans);letter-spacing:-.025em}
 @media(max-width:520px){.values-grid,.impact-grid,.opportunity-grid{grid-template-columns:1fr}.opportunity-card{padding:24px}.opportunity-notice{padding:27px 23px}}
 .about-hero-grid{display:grid;grid-template-columns:1fr .82fr;align-items:center;gap:8%}.about-hero h1{margin:0;max-width:650px}.about-hero-photo{margin:0}.about-hero-photo img{width:100%;aspect-ratio:1/.9;object-fit:cover;border-radius:170px 10px 10px 10px;box-shadow:0 24px 55px #123d2522}.about-hero-photo figcaption{font-size:11px;line-height:1.5;color:var(--muted);margin-top:11px}.about-hero-photo figcaption a{text-decoration:underline;text-underline-offset:2px}.about-objectives{background:var(--green);color:#fff}.about-objectives h2{color:#fff}.about-objectives p{color:#d9e5da}.about-objectives .check-list li{border-color:#ffffff30}.about-objectives .check-list li::before{color:var(--gold-light)}
 @media(max-width:760px){.about-hero-grid{grid-template-columns:1fr;gap:30px}.about-hero-photo{max-width:480px}.about-hero-photo img{max-height:340px}}
+
+/* V2 shared styling follows the reference palette and photographic rhythm. */
+:root{--green:#003e2c;--green-dark:#003324;--green-mid:#006442;--gold:#e69a06;--gold-light:#f5bc39;--paper:#fff;--wash:#f4f7f1;--line:#e4eae3}
+body{background:#fff}
+h1,h2{font-family:var(--sans);font-weight:900;letter-spacing:-.055em}
+.topline{height:4px;background:linear-gradient(90deg,var(--green) 0 70%,var(--gold) 70%)}
+.site-header{box-shadow:0 3px 18px #002f1e12;border-bottom-color:#e8ebe7}
+.header-inner{min-height:86px}
+.brand img{width:85px;height:70px}
+.brand-label b{font-weight:900;letter-spacing:.045em}
+.desktop-nav a{font-weight:750}
+.desktop-nav a:hover,.desktop-nav a[aria-current=page]{color:var(--green)}
+.desktop-nav a[aria-current=page]{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:10px;text-decoration-thickness:3px}
+.desktop-nav .header-cta{background:#db8b00;color:#fff;border-radius:5px;box-shadow:0 4px 12px #bf830032}
+.desktop-nav .header-cta:hover{background:#bc7900}
+.page-hero{position:relative;isolation:isolate;overflow:hidden;min-height:335px;display:flex;align-items:center;background:linear-gradient(90deg,#003626f5 0%,#003626e9 41%,#00362691 69%,#0036264d 100%),url('/images/reading-together-v2.webp') center 43%/cover;padding:66px 0;color:#fff}
+.page-hero .wrap{position:relative;z-index:1}
+.page-hero h1{color:#fff;font-size:clamp(42px,5.6vw,72px);line-height:1.05;max-width:790px;margin:12px 0 18px}
+.page-hero .eyebrow{color:#f5bc39}
+.page-hero .lead{color:#f2f7f2;font-size:18px;max-width:750px}
+.about-hero{background:#f3f6f1;color:var(--green);min-height:0}
+.about-hero h1{color:var(--green)}
+.about-hero .eyebrow{color:#a36500}
+.about-hero-photo img{border-radius:10px;box-shadow:0 20px 45px #0b392320}
+.section h2{font-family:var(--sans);font-weight:900;letter-spacing:-.045em}
+.section .eyebrow{color:#aa6800}
+.about-objectives{background:#003e2c}
+.about-objectives h2{color:#fff}
+.about-objectives .eyebrow{color:#f5bc39}
+.statement-grid article,.values-grid article,.impact-grid>div,.contact-card{box-shadow:0 7px 28px #123d2510}
+.opportunity-grid{gap:18px}
+.opportunity-card{overflow:hidden;padding:0 0 24px;box-shadow:0 8px 30px #123d2510}
+.opportunity-photo{height:205px;width:100%;object-fit:cover}
+.opportunity-card .card-icon{margin:-23px 24px 15px;position:relative;border:1px solid #e6e9e3;background:#fff;color:#d98a00;border-radius:50%;box-shadow:0 4px 14px #102e1d24}
+.opportunity-card h2,.opportunity-card p,.opportunity-card .text-link{margin-left:24px;margin-right:24px}
+.opportunity-card h2{font-size:21px}
+.opportunity-card .text-link{margin-top:auto}
+.site-footer{background:#003324}
+.footer-brand img{background:#fff}
+@media(max-width:980px){.header-inner{min-height:77px}.page-hero{min-height:300px}}
+@media(max-width:760px){.brand img{width:66px;height:57px}.page-hero{min-height:0;padding:58px 0;background-position:65% center}.page-hero h1{font-size:clamp(39px,9vw,58px)}.page-hero .lead{font-size:16px}.opportunity-photo{height:180px}}
