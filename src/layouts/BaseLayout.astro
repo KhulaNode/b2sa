@@ -36,9 +36,9 @@ const current = Astro.url.pathname;
     <div class="topline" aria-hidden="true"></div>
     <header class="site-header">
       <div class="wrap header-inner">
-        <a class="brand" href="/" aria-label="Back 2 School Africa Programme home">
+        <a class="brand" href="/" aria-label="Back2SchoolAfrica Programme home">
           <img src="/images/back2school-logo.webp" width="1536" height="1024" alt="" />
-          <span class="brand-label"><b>BACK 2 SCHOOL AFRICA</b><small>Programme · Nonprofit education initiatives</small></span>
+          <span class="brand-label"><b>Back2SchoolAfrica</b><small>Programme · Nonprofit education initiatives</small></span>
         </a>
         <nav class="desktop-nav" aria-label="Main navigation">
           <a href="/about/" aria-current={current === '/about/' ? 'page' : undefined}>About us</a>
@@ -57,13 +57,13 @@ const current = Astro.url.pathname;
     <footer class="site-footer">
       <div class="wrap footer-grid">
         <div class="footer-brand">
-          <img src="/images/back2school-logo.webp" width="115" height="77" alt="Back 2 School Africa logo" loading="lazy" />
-          <p>Back 2 School Africa Programme expands access to education, guidance and opportunity.</p>
+          <img src="/images/back2school-logo.webp" width="115" height="77" alt="Back2SchoolAfrica logo" loading="lazy" />
+          <p>Back2SchoolAfrica Programme expands access to education, guidance and opportunity.</p>
         </div>
         <div><h2>Explore</h2><a href="/about/">About us</a><a href="/education-opportunities/">Education opportunities</a><a href="/our-impact/">Our impact</a></div>
         <div><h2>Take part</h2><a href="/get-involved/">Get involved</a><a href="/contact/">Contact</a>{siteConfig.donationUrl && <a href={siteConfig.donationUrl}>Donate</a>}</div>
       </div>
-      <div class="wrap footer-bottom"><span>© {new Date().getFullYear()} {siteConfig.name}{siteConfig.registrationNumber && ` · NPO ${siteConfig.registrationNumber}`}</span><span class="footer-credit">Developed &amp; maintained by <a href="https://khulanode.com/">KhulaNode</a></span></div>
+      <div class="wrap footer-bottom"><span>© {new Date().getFullYear()} {siteConfig.name} · Registered as Back to School Afrai Programme{siteConfig.registrationNumber && ` · NPO ${siteConfig.registrationNumber}`}</span><span class="footer-credit">Developed &amp; maintained by <a href="https://khulanode.com/">KhulaNode</a></span></div>
     </footer>
   </body>
 </html>

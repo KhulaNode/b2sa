@@ -4,7 +4,7 @@ import { siteConfig } from '../config/site';
 const email = siteConfig.contactEmail.trim();
 const phone = siteConfig.contactPhone.trim();
 ---
-<BaseLayout title="Contact" description="Find confirmed public contact channels for Back 2 School Africa Programme and learn how to make a privacy-conscious enquiry.">
+<BaseLayout title="Contact" description="Find confirmed public contact channels for Back2SchoolAfrica Programme and learn how to make a privacy-conscious enquiry.">
   <section class="page-hero"><div class="wrap narrow"><span class="eyebrow">Contact</span><h1>Let’s start a conversation.</h1><p class="lead">For learning support, volunteering, partnerships or general enquiries, use a verified public channel below.</p></div></section>
   <section class="section"><div class="wrap two-col"><div><span class="eyebrow">Reach the team</span><h2>Choose a safe first step.</h2><p>Please avoid sending sensitive personal information or a child’s details in an initial enquiry.</p></div><div class="contact-card">{email || phone ? <><h3>Confirmed contact channels</h3>{email && <p><strong>Email</strong><br /><a href={`mailto:${email}`}>{email}</a></p>}{phone && <p><strong>Phone</strong><br /><a href={`tel:${phone}`}>{phone}</a></p>}<p class="small">Only share the information needed for the team to understand your enquiry.</p></> : <><h3>Public contact details are being confirmed.</h3><p>We have not published an unverified inbox, number or form. Please return to this page for the organisation’s confirmed contact channel.</p><p class="small">This website does not collect enquiries or store personal details.</p></>}</div></div></section>
 </BaseLayout>

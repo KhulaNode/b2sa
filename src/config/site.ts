@@ -3,7 +3,7 @@
  * are never rendered as live links. SITE_URL is supplied at build time.
  */
 export const siteConfig = {
-  name: 'Back 2 School Africa Programme',
+  name: 'Back2SchoolAfrica Programme',
   strapline: 'Expanding educational opportunity',
   registrationNumber: '', // Add only after the organisation confirms it for publication.
   contactEmail: '', // Confirmed public inbox, e.g. hello@example.org
